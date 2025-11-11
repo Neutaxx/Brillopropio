@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crecer con brillo propio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        @keyframes subtle-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        body {
+            background: linear-gradient(-45deg, #FEF9F3, #FFF5EC, #FEF9F3, #FDF4E8);
+            background-size: 400% 400%;
+            animation: subtle-gradient 15s ease infinite;
+            font-family: 'Nunito', sans-serif;
+            color: #2F4858; /* Default navy-blue */
+        }
+        .font-display {
+            font-family: 'Gaegu', cursive;
+        }
+        .font-body {
+             font-family: 'Nunito', sans-serif;
+        }
+        .bg-cream { background-color: #FEF9F3; }
+        .text-coral { color: #E76F51; }
+        .text-coral-dark { color: #d55f41; }
+        .bg-coral { background-color: #E76F51; }
+        .bg-coral-dark { background-color: #d55f41; }
+        .text-navy-blue { color: #2F4858; }
+        .text-lilac { color: #A082C0; }
+        .bg-lilac { background-color: #A082C0; }
+        .border-lilac { border-color: #A082C0; }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+        .group-hover\:animate-wiggle:hover {
+             animation: wiggle 0.5s ease-in-out infinite;
+        }
+        @keyframes gentle-bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .group-hover\:animate-gentle-bounce:hover {
+            animation: gentle-bounce 0.8s ease-in-out 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* Custom form styles */
+        .form-input-custom {
+            background-color: #FFF9F4;
+            color: #333333;
+            border: 1.5px solid #E0C7D1;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 12px 14px;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+        }
+        .form-input-custom::placeholder {
+            color: #888888;
+            opacity: 1; /* For Firefox */
+        }
+        .form-input-custom:focus {
+            outline: none;
+            border-color: #C57ACD;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 2px rgba(197, 122, 205, 0.2);
+        }
+        select.form-input-custom {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23C57ACD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+            padding-right: 2.5rem;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
