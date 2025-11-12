@@ -69,9 +69,9 @@ const FloatingDot = ({ src, className }: { src: string; className: string }) => 
 
 const RecommendationsPage: React.FC = () => {
   const pointImages = [
-    '/ilustraciones/puntoa.png',
-    '/ilustraciones/puntor.png',
-    '/ilustraciones/puntom.png',
+    'ilustraciones/puntoa.png',
+    'ilustraciones/puntor.png',
+    'ilustraciones/puntom.png',
   ];
 
   const randomImage = () => pointImages[Math.floor(Math.random() * pointImages.length)];

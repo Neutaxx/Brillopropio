@@ -79,9 +79,9 @@ const StageCard: React.FC<StageCardProps> = ({
 
 const SkinStages: React.FC = () => {
   const backgroundOptions = [
-    '/ilustraciones/rayon2r.png',
-    '/ilustraciones/rayon2a.png',
-    '/ilustraciones/rayon2p.png',
+    'ilustraciones/rayon2r.png',
+    'ilustraciones/rayon2a.png',
+    'ilustraciones/rayon2p.png',
   ];
 
   const getRandomBackground = () =>
@@ -113,7 +113,7 @@ const SkinStages: React.FC = () => {
             'Si quieres "jugar a maquillarte", usa productos de agua o labiales naturales.',
           ]}
           funFact="A esta edad, tu piel produce menos grasa. Por eso, se irrita o reseca fácil si usas productos para adultos."
-          illustrationSrc="/ilustraciones/Munnecaazul.png"
+          illustrationSrc="ilustraciones/Munnecaazul.png"
           backgroundImage={getRandomBackground()}
           delay={0}
         />
@@ -129,7 +129,7 @@ const SkinStages: React.FC = () => {
             '¡No exprimas los granitos! Déjalos sanar con paciencia.',
           ]}
           funFact="La piel se renueva sola cada 28 días. Si la dejas respirar, se ve más sana y luminosa."
-          illustrationSrc="/ilustraciones/Munecaazul3.png"
+          illustrationSrc="ilustraciones/Munecaazul3.png"
           backgroundImage={getRandomBackground()}
           delay={200}
         />
@@ -145,7 +145,7 @@ const SkinStages: React.FC = () => {
             'Evita productos con alcohol o fragancias fuertes.',
           ]}
           funFact="A esta edad, el exceso de maquillaje puede envejecer la piel más rápido."
-          illustrationSrc="/ilustraciones/Munecaazul4.png"
+          illustrationSrc="ilustraciones/Munecaazul4.png"
           backgroundImage={getRandomBackground()}
           delay={400}
         />

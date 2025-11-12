@@ -107,12 +107,12 @@ const BlogPage: React.FC = () => {
   const [authorName, setAuthorName] = useState('');
 
   const decorativeImages = [
-    '/ilustraciones/Munnecaazul.png',
-    '/ilustraciones/Munecaazul3.png',
-    '/ilustraciones/Munecaazul4.png',
-    '/ilustraciones/puntoa.png',
-    '/ilustraciones/puntor.png',
-    '/ilustraciones/puntom.png',
+    'ilustraciones/Munnecaazul.png',
+    'ilustraciones/Munecaazul3.png',
+    'ilustraciones/Munecaazul4.png',
+    'ilustraciones/puntoa.png',
+    'ilustraciones/puntor.png',
+    'ilustraciones/puntom.png',
   ];
 
   const randomImage = () => decorativeImages[Math.floor(Math.random() * decorativeImages.length)];

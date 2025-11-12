@@ -74,7 +74,7 @@ const ParentsGuide: React.FC = () => {
           title="1. Escucha antes de corregir"
           illustration={
             <img
-              src="/ilustraciones/estrellabravar.png"
+              src="ilustraciones/estrellabravar.png"
               alt="Muñeca azul"
               className="w-40 md:w-48 lg:w-56 object-contain animate-float"
             />
@@ -90,7 +90,7 @@ const ParentsGuide: React.FC = () => {
           title="2. Informa con ejemplos reales"
           illustration={
             <img
-              src="/ilustraciones/estrellaojoa.png"
+              src="ilustraciones/estrellaojoa.png"
               alt="Muñeca azul"
               className="w-40 md:w-48 lg:w-56 object-contain animate-float"
             />
@@ -113,7 +113,7 @@ const ParentsGuide: React.FC = () => {
           title="3. Refuerza su identidad, no su apariencia"
           illustration={
             <img
-              src="/ilustraciones/estrellafelizp.png"
+              src="ilustraciones/estrellafelizp.png"
               alt="Muñeca azul"
               className="w-40 md:w-48 lg:w-56 object-contain animate-float"
             />

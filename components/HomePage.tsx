@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
           }`}
         >
           <img
-            src="/ilustraciones/titulo1.png"
+            src="ilustraciones/titulo1.png"
             alt="Crecer con brillo propio"
             className="w-full max-w-[1400px] mx-auto drop-shadow-lg"
           />
@@ -97,7 +97,7 @@ const HomePage: React.FC = () => {
               }`}
             >
               <img
-                src="/ilustraciones/Munnecaazul.png"
+                src="ilustraciones/Munnecaazul.png"
                 alt="Muñeca azul"
                 className="w-48 md:w-56 lg:w-64 mx-auto drop-shadow-md animate-float"
               />
