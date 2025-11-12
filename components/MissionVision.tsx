@@ -11,9 +11,9 @@ const MissionVision: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <div className={`transition-transform duration-1000 ${inView ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
           <p className="text-lg text-navy-blue mb-8 leading-relaxed">
-            Queremos que las niñas descubran que su piel cambia, crece, se adapta y que está bien.
-            Queremos que los papás sepan que apoyar esa curiosidad es parte de formar una autoestima sana.
-            Y sobre todo, queremos que este sea un lugar para aprender a brillar sin lastimarse.
+            ¡Hola! Nos alegra que estés aquí.
+Este es un espacio para aprender a cuidar tu piel, entenderla y quererla, sin dejar de divertirte con el maquillaje.
+Aquí no te diremos que no te maquilles, sino cómo hacerlo de forma consciente, sabiendo qué es bueno para tu edad y qué cosas pueden esperar un poquito más.
           </p>
           <div className="space-y-6">
             <div>

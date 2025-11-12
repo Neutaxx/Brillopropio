@@ -53,9 +53,9 @@ const HomePage: React.FC = () => {
               style={{ backgroundColor: '#e95448' }}
             >
               <p className="text-lg md:text-xl mb-6 leading-relaxed">
-                Queremos que las niñas descubran que su piel cambia, crece, se adapta y que está bien.
-                Queremos que los papás sepan que apoyar esa curiosidad es parte de formar una autoestima sana.
-                Y sobre todo, queremos que este sea un lugar para aprender a brillar sin lastimarse.
+                ¡Hola! Nos alegra que estés aquí.
+Este es un espacio para aprender a cuidar tu piel, entenderla y quererla, sin dejar de divertirte con el maquillaje.
+Aquí no te diremos que no te maquilles, sino cómo hacerlo de forma consciente, sabiendo qué es bueno para tu edad y qué cosas pueden esperar un poquito más.
               </p>
               <div className="space-y-6">
                 <div>
