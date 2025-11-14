@@ -42,7 +42,8 @@ const HomePage: React.FC = () => {
       {/* Mission/Vision Section */}
       <section ref={missionRef} className="py-24 overflow-x-hidden">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Tarjeta roja personalizada (lado izquierdo) */}
+
+          {/* Tarjeta roja */}
           <div
             className={`transition-transform duration-1000 delay-200 ${
               missionInView ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
@@ -54,8 +55,8 @@ const HomePage: React.FC = () => {
             >
               <p className="text-lg md:text-xl mb-6 leading-relaxed">
                 ¡Hola! Nos alegra que estés aquí.
-Este es un espacio para aprender a cuidar tu piel, entenderla y quererla, sin dejar de divertirte con el maquillaje.
-Aquí no te diremos que no te maquilles, sino cómo hacerlo de forma consciente, sabiendo qué es bueno para tu edad y qué cosas pueden esperar un poquito más.
+                Este es un espacio para aprender a cuidar tu piel, entenderla y quererla, sin dejar de divertirte con el maquillaje.
+                Aquí no te diremos que no te maquilles, sino cómo hacerlo de forma consciente, sabiendo qué es bueno para tu edad y qué cosas pueden esperar un poquito más.
               </p>
               <div className="space-y-6">
                 <div>
@@ -75,7 +76,7 @@ Aquí no te diremos que no te maquilles, sino cómo hacerlo de forma consciente,
             </div>
           </div>
 
-          {/* Texto de cita (lado derecho) */}
+          {/* Texto + ilustración */}
           <div
             className={`flex flex-col items-center justify-center text-center transition-transform duration-1000 delay-200 ${
               missionInView ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
@@ -90,7 +91,6 @@ Aquí no te diremos que no te maquilles, sino cómo hacerlo de forma consciente,
               <span style={{ color: '#c19dc9' }}>y confianza. </span>
             </p>
 
-            {/* Imagen Muñeca azul */}
             <div
               className={`mt-8 transition-all duration-1000 ${
                 missionInView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-5 scale-95'

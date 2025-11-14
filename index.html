@@ -4,149 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crecer con brillo propio</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Fuente del cuerpo desde Google Fonts -->
+    <!-- Fuente Nunito -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    />
 
+    <!-- ======================
+         ESTILOS GLOBALES
+    ======================= -->
     <style>
-        /* ==================================================
-           1. REGISTRA TU FUENTE LOCAL
-           IMPORTANTE: la ruta y el nombre deben ser EXACTOS
-        =================================================== */
+        /* ============================
+            🅰 Importar fuente local
+        ============================ */
         @font-face {
             font-family: 'BauhausLace';
-            /* ⬇⬇⬇ Ruta RELATIVA desde index.html ⬇⬇⬇ */
             src: url('fonts/BauhausLaceDisplay-Thin (1).otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
 
-        /* ==================================================
-           2. CONFIGURACIÓN GLOBAL
+        /* ===================================================
+           🎨 FONDO GLOBAL ANIMADO (VERSIÓN INTENSA)
         =================================================== */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @keyframes subtle-gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
 
         body {
-            background: linear-gradient(-45deg, #FEF9F3, #FFF5EC, #FEF9F3, #FDF4E8);
-            background-size: 400% 400%;
-            animation: subtle-gradient 15s ease infinite;
-            font-family: 'Nunito', sans-serif; /* Fuente base */
-            color: #2F4858; /* navy-blue */
-        }
-
-        /* ==================================================
-           3. CLASES DE FUENTE
-        =================================================== */
-        /* Titulos: usan tu fuente local */
-        .font-display {
-  font-family: 'BauhausLace', 'Nunito', sans-serif !important;
-  -webkit-text-stroke: 0.4px currentColor;
-  paint-order: stroke fill;
-}
-
-        /* Texto normal (por si quieres usarla de forma explícita) */
-        .font-body {
+            margin: 0;
             font-family: 'Nunito', sans-serif;
+
+            /* Fondos superpuestos */
+            background:
+                radial-gradient(circle at 0% 0%, rgba(49,83,160,0.40) 0, transparent 55%),
+                radial-gradient(circle at 100% 10%, rgba(193,157,201,0.65) 0, transparent 60%),
+                radial-gradient(circle at 30% 80%, rgba(233,84,72,0.35) 0, transparent 65%),
+                linear-gradient(180deg, #fdfcf1 0%, #ffd6cf 45%, #fdfcf1 100%);
+
+            background-size: 300% 300%;
+            animation: auroraMove 10s ease-in-out infinite;
+            background-attachment: fixed;
         }
 
-        /* ==================================================
-           4. COLORES PERSONALIZADOS
-        =================================================== */
-        .bg-cream { background-color: #FEF9F3; }
+        @keyframes auroraMove {
+            0%   { background-position: 0% 0%; }
+            25%  { background-position: 80% 20%; }
+            50%  { background-position: 40% 90%; }
+            75%  { background-position: 100% 60%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        /* =====================================
+           🎨 COLORES Y TIPOGRAFÍA PERSONALIZADA
+        ===================================== */
+        .font-display {
+            font-family: 'BauhausLace', Nunito, sans-serif;
+        }
+
+        .text-navy-blue { color: #2e53a0; }
         .text-coral { color: #e95448; }
-        .text-coral-dark { color: #e95448; }
         .bg-coral { background-color: #e95448; }
-        .bg-coral-dark { background-color: #e95448; }
-        .text-navy-blue { color: #2F4858; }
-        .text-lilac { color: #c19dc9; }
-        .bg-lilac { background-color: #A082C0; }
-        .border-lilac { border-color: #A082C0; }
 
-        /* ==================================================
-           5. ANIMACIONES
-        =================================================== */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
 
-        @keyframes wiggle {
-            0%, 100% { transform: rotate(-1deg); }
-            50% { transform: rotate(1deg); }
-        }
-        .group-hover\:animate-wiggle:hover {
-             animation: wiggle 0.5s ease-in-out infinite;
-        }
+        /* =====================================
+           🧩 FIX GLOBAL PARA FORMULARIOS
+           (Soluciona Blog + Aprende jugando)
+        ===================================== */
 
-        @keyframes gentle-bounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
-        .group-hover\:animate-gentle-bounce:hover {
-            animation: gentle-bounce 0.8s ease-in-out 1;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        /* ==================================================
-           6. ESTILOS DE FORMULARIO
-        =================================================== */
         .form-input-custom {
-            background-color: #FFF9F4;
-            color: #333333;
-            border: 1.5px solid #E0C7D1;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            padding: 12px 14px;
-            transition: all 0.2s ease-in-out;
             width: 100%;
-        }
+            display: block;
+            box-sizing: border-box;
 
-        .form-input-custom::placeholder {
-            color: #888888;
-            opacity: 1;
+            padding: 12px 16px;
+            margin: 0;
+
+            border-radius: 14px;
+            border: 1.8px solid rgba(193, 157, 201, 0.9); /* #c19dc9 */
+            background: rgba(255, 255, 255, 0.96);
+            color: #2e53a0;
+
+            font-size: 16px;
+            line-height: 1.4;
+            font-family: 'Nunito', sans-serif;
+
+            box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+            outline: none;
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.25s ease,
+                transform 0.2s ease;
         }
 
         .form-input-custom:focus {
-            outline: none;
-            border-color: #C57ACD;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 0 2px rgba(197, 122, 205, 0.2);
+            border-color: #e95448;
+            box-shadow:
+                0 0 0 4px rgba(233,84,72,0.25),
+                0 10px 20px rgba(0,0,0,0.10);
+            transform: translateY(-2px);
+        }
+
+        .form-input-custom::placeholder {
+            color: rgba(46, 83, 160, 0.55);
+        }
+
+        textarea.form-input-custom {
+            min-height: 140px;
+            resize: vertical;
         }
 
         select.form-input-custom {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23C57ACD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-            background-size: 1.2em;
-            padding-right: 2.5rem;
+            cursor: pointer;
         }
     </style>
 
-    <!-- React Import Map -->
+    <!-- Importmap React -->
     <script type="importmap">
     {
       "imports": {
@@ -156,11 +136,12 @@
       }
     }
     </script>
-
-    <link rel="stylesheet" href="/index.css">
 </head>
+
 <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
+
+
